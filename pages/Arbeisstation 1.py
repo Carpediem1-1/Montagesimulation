@@ -5,7 +5,7 @@ from datetime import datetime
 from utils import display_order_info
 
 # 定义 selections.json 文件的路径
-selections_file_path = 'C:\Users\zxm14\Documents\GitHub\Montagesimulation\Montagesimulation-Copy\pages\selections.json'
+selections_file_path = 'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages\selections.json'
 
 def load_json_data(filename):
     """加载 JSON 文件"""
