@@ -1,0 +1,29 @@
+[
+    {
+        "Bestelldatum und Uhrzeit": "2023-12-03 17:49:21",
+        "Kunde": "ZRM",
+        "Auftragsnummer": "ZRM20231203174921",
+        "Sonderwunsch": "für mich selbst",
+        "Kundentakt": "45",
+        "Achse": 3,
+        "Reifen": 6
+    },
+    {
+        "Bestelldatum und Uhrzeit": "2023-12-03 17:49:44",
+        "Kunde": "Rj",
+        "Auftragsnummer": "RJ20231203174944",
+        "Sonderwunsch": "für seine Mutter",
+        "Kundentakt": "65",
+        "Achse": 3,
+        "Reifen": 6
+    },
+    {
+        "Bestelldatum und Uhrzeit": "2023-12-03 17:50:16",
+        "Kunde": "Dan",
+        "Auftragsnummer": "DAN20231203175016",
+        "Sonderwunsch": "für seinen Bruder",
+        "Kundentakt": "50",
+        "Achse": 3,
+        "Reifen": 6
+    }
+]

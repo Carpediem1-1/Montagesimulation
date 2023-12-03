@@ -1,0 +1,17 @@
+[
+    {
+        "Order": 1,
+        "Dauerzeit": 3,
+        "Kundentakt": "45"
+    },
+    {
+        "Order": 2,
+        "Dauerzeit": 3,
+        "Kundentakt": "65"
+    },
+    {
+        "Order": 3,
+        "Dauerzeit": 1,
+        "Kundentakt": "50"
+    }
+]
