@@ -50,7 +50,7 @@ def generate_workstation_json_files(orders):
 
     st.success("Alle JSON-Dateien wurden erfolgreich erstellt.")
 
-file_path = 'pages\bestellungen_database.json'
+file_path = 'bestellungen_database.json'
 if os.path.exists(file_path):
     orders = load_json_objects(file_path)
     if orders:
