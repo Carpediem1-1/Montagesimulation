@@ -40,7 +40,7 @@ def generate_workstation_json_files(orders):
 
             workstation_orders[task].append(order_info)
 
-    output_directory = r'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages\pages'
+    output_directory = r'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages'
     for task, orders in workstation_orders.items():
         filename = f"{task.replace(' ', '_')}.json"
         full_path = os.path.join(output_directory, filename)

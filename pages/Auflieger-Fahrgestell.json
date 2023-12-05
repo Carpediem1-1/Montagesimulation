@@ -5,10 +5,8 @@
         "Auftragsnummer": "MUT20231205145134",
         "Sonderwunsch": "für meine Schwester",
         "Kundentakt": "5",
-        "Container 1": "Blau",
-        "Container 2": "Blau",
-        "Container 3": "Blau",
-        "Container 4": "Blau"
+        "Achse": 3,
+        "Reifen": 6
     },
     {
         "Bestelldatum und Uhrzeit": "2023-12-05 14:51:50",
@@ -16,10 +14,8 @@
         "Auftragsnummer": "VAT20231205145150",
         "Sonderwunsch": "für meine Frau",
         "Kundentakt": "4",
-        "Container 1": "Blau",
-        "Container 2": "Blau",
-        "Container 3": "Blau",
-        "Container 4": "Blau"
+        "Achse": 3,
+        "Reifen": 6
     },
     {
         "Bestelldatum und Uhrzeit": "2023-12-05 14:52:09",
@@ -27,9 +23,7 @@
         "Auftragsnummer": "DAN20231205145209",
         "Sonderwunsch": "für meinen Onkel",
         "Kundentakt": "3",
-        "Container 1": "Gelb",
-        "Container 2": "Blau",
-        "Container 3": "Blau",
-        "Container 4": "Blau"
+        "Achse": 3,
+        "Reifen": 6
     }
 ]

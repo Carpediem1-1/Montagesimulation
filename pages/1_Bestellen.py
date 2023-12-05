@@ -10,7 +10,7 @@ st.markdown("# Bestellen 🏪")
 st.sidebar.markdown("# Bestellen 🏪")
 
 # Datenbank-Datei für Werkzeugnisinformationen im JSON-Format
-database_filename = r"C:\Users\zxm14\Documents\GitHub\Montagesimulation\Montagesimulation -副本\pages\bestellungen_database.json"
+database_filename = "bestellungen_database.json"
 
 # Laden der bestehenden Werkzeugnisdaten aus der JSON-Datei
 def load_existing_data(filename):

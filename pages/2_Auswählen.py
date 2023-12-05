@@ -3,7 +3,7 @@ import json
 import os
 
 # 文件保存路径
-file_path = 'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages\selections.json'
+file_path = r'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages\selections.json'
 
 # 保存选择到文件
 def save_selections(selections):

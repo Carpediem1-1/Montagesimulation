@@ -17,6 +17,7 @@ def create_chart(order_id, stations_data):
     durations = []
     kundentakts = []
     
+    # Collecting data for the specified order
     for station in stations:
         station_data = stations_data.get(station, [])
         for data in station_data:
@@ -31,18 +32,27 @@ def create_chart(order_id, stations_data):
             durations.append(0)
             kundentakts.append(0)
 
-    # 找出与 Kundentakt 差距最大的 Arbeitsstation
-    differences = [abs(d - k) for d, k in zip(durations, kundentakts)]
-    max_diff_index = differences.index(max(differences)) if differences else -1
+    # Identifying stations with the largest difference and those exceeding Kundentakt
+    differences = [d - k for d, k in zip(durations, kundentakts)]
+    max_diff_index = differences.index(max(differences, key=abs)) if differences else -1
+    exceed_kundentakt_indices = [i for i, diff in enumerate(differences) if diff > 0]
 
-    # 绘制条形图，突出显示差距最大的柱形
+    # Plotting the bars with color coding
     for idx, (station, duration) in enumerate(zip(stations, durations)):
-        color = 'navy' if idx == max_diff_index else 'lightblue'
+        if idx == max_diff_index:
+            color = 'navy'  # Color for the bar with the largest difference
+        elif idx in exceed_kundentakt_indices:
+            color = 'green'  # Color for bars exceeding Kundentakt
+        else:
+            color = 'lightblue'  # Default color
+
         ax.bar(station, duration, color=color, label='Dauerzeit' if idx == 0 else '_nolegend_')
     
+    # Setting y-axis limit and labels
     ax.set_ylim(0, 120)
     ax.set_yticks(range(0, 121, 20))
 
+    # Adding data labels on each bar
     for bar in ax.patches:
         ax.annotate(f'{bar.get_height()}',
                     xy=(bar.get_x() + bar.get_width() / 2, bar.get_height()),
@@ -50,12 +60,14 @@ def create_chart(order_id, stations_data):
                     textcoords="offset points",
                     ha='center', va='bottom')
 
+    # Drawing Kundentakt line and label
     kundentakt_value_for_order = next((k for k in kundentakts if k > 0), 0)
     
     if kundentakt_value_for_order > 0:
         ax.axhline(y=kundentakt_value_for_order, color='red', linestyle='-', linewidth=2, label='Kundentakt')
         ax.text(0.5, kundentakt_value_for_order, f'{kundentakt_value_for_order}', color='red', va='bottom', ha='center')
     
+    # Setting chart title and labels
     ax.set_xlabel('Arbeitsstation')
     ax.set_ylabel('Dauerzeit (Sekunden)')
     ax.set_title(f'Dauerzeit vs. Kundentakt für Order {order_id}')

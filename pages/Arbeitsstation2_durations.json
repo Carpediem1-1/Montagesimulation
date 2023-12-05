@@ -2,16 +2,21 @@
     {
         "Order": 1,
         "Dauerzeit": 2,
-        "Kundentakt": "45"
+        "Kundentakt": "5"
     },
     {
         "Order": 2,
-        "Dauerzeit": 2,
-        "Kundentakt": "65"
+        "Dauerzeit": 3,
+        "Kundentakt": "4"
     },
     {
         "Order": 3,
-        "Dauerzeit": 2,
-        "Kundentakt": "50"
+        "Dauerzeit": 3,
+        "Kundentakt": "3"
+    },
+    {
+        "Order": 1,
+        "Dauerzeit": 6,
+        "Kundentakt": "5"
     }
 ]
