@@ -82,7 +82,7 @@ def main():
     stations_data = {}
     all_orders = set()
 
-    base_path = r'C:\Users\zxm14\Documents\GitHub\Montagesimulation-Copy\pages'
+    base_path = 'pages'
     for i in range(1, 7):
         filename = os.path.join(base_path, f'Arbeitsstation{i}_durations.json')
         station_data = load_json_data(filename)
