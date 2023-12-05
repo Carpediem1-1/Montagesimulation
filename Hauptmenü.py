@@ -16,9 +16,9 @@ st.write("Diese Streamlit App dient der digitalen Abbildung von Bestellungen, de
 col1, col2 = st.columns(2)
 
 with col1:
-   #st.header("Montagelayout")
-   #st.image("layout.JPG",width=300)
+   st.header("Montagelayout")
+   st.image("layout.JPG",width=300)
 
 with col2:
-   #st.header("Link zum Tool")
-   #st.image("QR.jpg",width=240)
+   st.header("Link zum Tool")
+   st.image("QR.jpg",width=240)
