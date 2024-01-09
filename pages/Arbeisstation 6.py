@@ -41,27 +41,6 @@ def main():
             for i, order in enumerate(data, start=1):
                 with st.expander(f"Order {i}"):
                     display_order_info(order)
-def main():
-    station_number = '6'  # 每个 Arbeitsstation 文件中设置不同的编号
-    
-    # 从 selections.json 文件读取选定的工作流程
-    selections = load_json_data(selections_file_path)
-    selected_workflow = selections.get(f"Arbeitsstation{station_number}_workflow", None)
-
-    if selected_workflow:
-        st.header(f"Arbeitsstation {station_number}: {selected_workflow}")
-
-        json_file = os.path.join('pages', f"{selected_workflow.replace(' ', '_')}.json")
-        data = load_json_data(json_file)
-
-        if data is not None:
-            duration_data_key = f'duration_data_{station_number}'  # 使用唯一的键
-            if duration_data_key not in st.session_state:
-                st.session_state[duration_data_key] = []
-
-            for i, order in enumerate(data, start=1):
-                with st.expander(f"Order {i}"):
-                    display_order_info(order)
 
                     col1, col2 = st.columns(2)
                     start_button = col1.button(f"Starten Order {i}", key=f"start_{station_number}_{i}")
