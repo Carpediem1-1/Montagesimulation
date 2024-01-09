@@ -101,3 +101,5 @@ if st.button("Bestellung abschicken") and not st.session_state['submit_clicked']
 elif st.session_state['submit_clicked']:
     # Wenn eine Bestellung bereits abgeschickt wurde, zeigen Sie eine Bestätigung an
     st.success("Ihre Bestellung wurde bereits gesendet. Bitte schicken Sie eine neue Bestellung ab oder aktualisieren Sie die Seite.")
+    # Wenn eine Bestellung bereits abgeschickt wurde, zeigen Sie eine Bestätigung an
+    st.success("Ihre Bestellung wurde bereits gesendet. Bitte schicken Sie eine neue Bestellung ab oder aktualisieren Sie die Seite.")
